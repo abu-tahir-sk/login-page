@@ -10,10 +10,23 @@
      <section class="login-screen">
                        <div class="login-form">
                         <h1 >Login your account</h1>
-                        <input placeholder="Enter your email" class="input" type="text">
+                        <p id="email-text"></p>
+                        <input 
+                         id="email"
+                        placeholder="Enter your email" class="input" type="text">
                         <input placeholder="Enter your password" class="input" type="text">
-                        <button class="btn">Login</button>
+                        <button class="btn" id="login-btn">Login</button>
                        </div>
      </section>  
+
+     <script >
+      
+      
+        document.getElementById('login-btn').addEventListener('click',()=>{
+            const email = document.getElementById('email').value
+      console.log(email)
+            document.getElementById('email-text').innerText=`Your email is ${email}`
+        })
+     </script>
 </body>
 </html>
